@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKINTIFIC</title>
+    <link rel="icon" type="image/x-icon" href="latihan5D/img/favicon3.ico">
+    <style>
+        body {
+            font-family: arial;
+            background-color: lightpink;
+            padding: 20px;
+        }
+        header {
+            border: 5px outset;
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px;
+            background-color: #F0FFFF;
+            color: black;
+            padding: 20px;
+        }
+        .praktek {
+            border: 1px solid;
+            border-radius: 10px;
+            text-align: justify;
+            margin: 20px;
+            padding: 20px;
+        background-color: ivory;
+        }
+        .image-button-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .button-group {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .button {
+            background-color: #ff33bb;
+            color: white;
+            padding: 10px 20px;
+            border: outset;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #ff80d5;
+            border: inset;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>SKINTIFIC</h1>
+    <h4>SCIENTIFIC SKINCARE FOR EVERYONE</h4>
+</header>
+
+<main>
+    <section class="praktek">
+        <button class="button" type="button" onclick="document.getElementById('home').innerHTML = Date()">Tampilkan Tanggal Hari Ini</button>
+
+        <p id= "home"></p>
+        <br>
+
+        <h2>Produk Baru</h2>
+
+        <button class="button" onclick="SapaPengguna()">Lihat</button>
+        <p id="produkbaru"></p>
+        <script>
+        function SapaPengguna() {
+            document.getElementById("produkbaru").innerHTML = "<ul><li>SKINTIFIC - Ultra Cover Powder Foundation</li><li>SKINTIFIC - Lock The Look Setting Spray</li><li>SKINTIFIC - Retinol Skin Renewal Serum</li></ul>";
+        }
+        </script>
+    </section>
+
+    <section class="praktek">
+        <h3>Voucher Spesial Untukmu!</h3>
+        <h4>Nikmati diskon 20% dengan koder voucher berikut:</h4>
+        <p id="demo1">GLOWING777</p>
+        <button class="button" type="button" onclick="document.getElementById('demo1').style.display='block'">Lihat</button>
+        <button class="button" type="button" onclick="document.getElementById('demo1').style.display='none'">Nanti Saja</button>
+
+        <br>
+        <br>
+        <br>
+
+        <h3>Scientific Skincare For Everyone</h3>
+        <p id="demo2">Setiap orang berhak mendapatkan kulit yang lebih sehat, baik dari dalam maupun luar.</p>
+        <button class="button" type="button" onclick='document.getElementById("demo2").innerHTML = "Setiap orang berhak mendapatkan kulit yang lebih sehat, baik dari dalam maupun luar. Tidak hanya hasil yang cepat dan efektif, kami juga mengutamakan keamanan kulit Anda dalam jangka panjang, tanpa mengorbankan kesehatan lapisan kulit Anda, Skintifific akan memberikan solusi terbaik untuk Anda. Tim peneliti kami menghabiskan waktu bertahun-tahun untuk mempelajari dan mengembangkan solusi dalam botol. Kami mendasarkan semua formulasi kami pada teknologi TTE (Trilogy Triangle Effect) yang tidak hanya memberikan hasil yang efektif dan tepat, tetapi juga aman dan lembut bahkan untuk orang dengan kulit sensitif."'>Baca Semua!</button>
+    </section>
+
+    <section class="praktek">
+        <h2>SKINTIFIC - Perfect Stay Velvet Matte Cushion</h2>
+        <p>Cushion dengan hasil akhir velvet matte, hasil akhir matte halus dan membuat tampilan akhir flawless dan tampak seperti kulit sehat. High coverage yang dapat menutupi noda hitam, mata panda dan ketidaksempurnaan kulit dalam 1 kali usap. Oil control selama 12 jam dan tahan lama dengan teknologi Smart Oil Control, menyerap minyak sehingga kulit bebas kilap namun tetap terhidrasi. Menggunakan 3D Film Forming Agent, menciptakan struktur hexagonal mesh yang sesuai dengan kulit wajah, untuk mengunci warna dan lebih tahan air. Infused skincare dengan Triple Antioxidant yang mencegah kusam sepanjang pemakaian, serta Niacinamide, Copper Tripeptide-1 dan Tocopherol yang membuat tampilan flawless, tidak cakey dan transferproof. Teksturnya ringan, nyaman diaplikasikan tanpa kilap berlebih dan tidak membuat kulit kering.</p>
+        <br>
+
+        <div class="image-button-container">
+            <img id="img" src="img/cbiru.jpg" style="width: 250px; height: 250px;">
+            <div class="button-group">
+            <button class="button" onclick="document.getElementById('img').src='img/biru01.jpg'">01 VANILLA</button>
+            <button class="button" onclick="document.getElementById('img').src='img/biru02.jpg'">02 IVORY</button>
+            <button class="button" onclick="document.getElementById('img').src='img/biru03.jpg'">03 PETAL</button>
+            </div>
+        </div>
+        
+        <br>
+
+        <h4>Bahan-bahan:</h4>
+        <p id="demo3">aqua, cyclopentasiloxane, ci 77891, trimethylsiloxysilicate, butylene glycol, cyclohexasiloxane, ci 77492, polyglyceryl-3 diisostearate, synthetic fluorphlogopite, peg-10 dimethicone, isododecane, niacinamide, copper tripeptide-1, disteardimonium hectorite, astaxanthin, peg/ppg-18/18 dimethicone, triethoxycaprylylsilan, tocopherol, polymethylsilsesquioxane, ergothioneine, glutathione, betaine, propylene carbonate, ci 77491, caprylyl glycol, ethylhexylglycerin, ci 77499, magnesium sulfate, tribehenin, phenoxyethanol, aluminum hydroxide, tricholoma matsutake extract, pentylene glycol</p>
+        <button class="button"type="button" onclick="document.getElementById('demo3').style.fontSize='25px'">Klik untuk lihat lebih jelas!</button>
+    </section>
+
+    <section class="praktek">
+        <h2>SKINTIFIC - Cover All Perfect Cushion</h2>
+        <p>Cover All Perfect Cushion menyempurnakan corak kulit Anda dalam satu ketukan, dengan Nano Silicone Crosspolymer 0.25 mikron, memberikan tekstur ringan dengan coverage tinggi (medium to full coverage) dengan hasil akhir yang sempurna. Teknologi Film Pelindung Jas Hujan akan melindungi penampilan Anda dari minyak dan air, sehingga tampilan Anda akan bertahan hingga 12 jam. Diperkaya dengan perpaduan 5X Ceramide, Centella dan Hyaluronic Acid yang akan menutrisi dan memperkuat pelindung kulit Anda.. Dilengkapi dengan tabir surya fisikokimia SPF 35 PA++++ yang membantu melindungi kulit Anda dari kerusakan akibat sinar UV. Dilengkapi dengan puff berbentuk tetesan air mata yang dibuat dengan Teknologi Rubycell Puff yang menghembuskan aplikasi bantalan sambil menghaluskan hasil akhirnya.</p>
+        <br>
+
+        <div class="image-button-container">
+            <img id="img2" src="img/cgold.jpg" style= width="250px" height="250px">
+            <div class="button-group">
+            <button class="button" onclick="document.getElementById('img2').src='img/gold01.jpg'">01 VANILLA</button>
+            <button class="button" onclick="document.getElementById('img2').src='img/gold02.jpg'">02 IVORY</button>
+            <button class="button" onclick="document.getElementById('img2').src='img/gold03.jpg'">03 PETAL</button>
+            </div>
+        </div>
+
+        <br>
+
+        <h4>Bahan-bahan:</h4>
+        <p id="demo4">aqua, ci 77891, cyclopentasiloxane, trimethylsiloxysilicate, dtrimethicone, hexyldecyl myristoyl methylaminopropionate, butylene glycol, ci 77492, glycerin, acrylates/stearyl acrylate/dimethicone methacrylate copolymer, ci 77491, magnesium sulfate, disteardimonium hectorite, aluminum hydroxide, triethoxycaprylylsilane, synthetic fluorphlogopite, 1,2-hexanediol, ci 77499, caprylyl glycol, dimethicone crosspolymer, glyceryl caprylate, trihydroxystearin, palmitic acid, ethylhexylglycerin, sorbitan sesquioleate, centella asiatica extract, cholesterol, ceramide ap, ceramide np, ceramide as, ceramide ns/ceramide ng, ceramide eop, stearic acid, myristic acid, tocopherol, titanium dioxide(nano), zinc oxide(nano), homosalate, hydrolyzed hyaluronic acid, hydrogenated lecithin, dipropylene glycol, pentylene glycol, glyceryl stearate, sucrose distearate</p>
+        <button class="button"type="button" onclick="document.getElementById('demo4').style.fontSize='25px'">Klik untuk lihat lebih jelas!</button>
+    </section>
+
+    <section class="praktek">
+        <h3>Nikmati keuntungan setiap bulan dengan mendaftar jadi anggota kami!</h3>
+        <p id="demo5">Link registrasi membership disini! <a href="https://skintific.com/account/register" target="_blank">LINK</a></p>
+        <button class="button" type="button" onclick="document.getElementById('demo5').style.display='none'">Sembunyikan</button>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <h2>Order Now</h2>
+        <form action="/submit-form" method="post">
+        <label for="name">Nama:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="kode">Kode Voucher:</label><br>
+        <input type="kode" id="kode" name="kode"><br><br>
+        <label for="cushion">Pilih Cushion:</label><br>
+        <select id="cushion" name="cushion">
+            <option value="perfect stay velvet matte">Perfect Stay Velvet Matte</option>
+            <option value="cover all perfect">Cover All Perfect</option>
+        </select><br><br>
+        <label for="shade">Pilih Shade:</label><br>
+        <select id="shade" name="shade">
+            <option value="01">01 VANILLA</option>
+            <option value="02">02 IVORY</option>
+            <option value="03">03 PETAL</option>
+        </select><br><br>
+        <input type="submit" value="Checkout">
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p> Dipublikasikan oleh Kelompok 5 - Kelas 5D | <a href="https://skintific.com/" target="_blank">Kunjungi Website Resmi</a></p>
+</footer>
+
+</body>
+</html>
